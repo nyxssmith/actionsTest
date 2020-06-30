@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: mkrakowitzer/actions-makepdfs@master
-      if: github.ref == 'refs/heads/master'
+    - name: Markdown to PDF
+      uses: valtyr/pandoc-action@v0.1-alpha
     - uses: actions/upload-artifact@v1
       with:
         name: platform-architecture-docs
