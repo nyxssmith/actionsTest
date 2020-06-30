@@ -5,10 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: autopep8
-        uses: peter-evans/autopep8@v1
-        with:
-          args: --recursive --in-place --aggressive --aggressive .
       - name: blackformatter
         uses: lgeiger/black-action@master
         with:
