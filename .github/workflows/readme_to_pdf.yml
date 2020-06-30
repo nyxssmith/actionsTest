@@ -1,30 +1,13 @@
 name: README to PDF
 
-on:
-  push:
-    paths:
-      - '**.md'
 jobs:
-  convert_md:
+  makepdfs:
     runs-on: ubuntu-latest
     steps:
-      # We must checkout the latest version of the code to get a copy of all .md files
-      - name: Checkout Code
-        uses: actions/checkout@v2.0.0
-        with:
-          fetch-depth: 1
-      - name: Create .pdfs
-        uses: scottypate/md-to-pdf@v0.1.1
-        env: {
-          # Use this parameter to determine where the generated .pdf(s) will be stored.
-          PDF_DIR: './pdfs'
-        }
-         - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2
-        with:
-          commit-message: converted files
-          committer: Nick Smith <nickssmith@users.noreply.github.com>
-          title: readme convertde to pdf
-          body: This is an auto-generated PR with readme to pdf.
-          labels: autopep8, automated pr
-          branch: autoConversions
+    - uses: actions/checkout@v1
+    - uses: mkrakowitzer/actions-makepdfs@master
+      if: github.ref == 'refs/heads/master'
+    - uses: actions/upload-artifact@v1
+      with:
+        name: platform-architecture-docs
+        path: tmp
