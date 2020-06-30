@@ -34,6 +34,10 @@ make a custom githuba actions workflow to do all these steps
 on commit
 [ ]  Auto lint-check for PEP8 compliance (precommit/prepush hook w/ flake8 & black)
     https://github.com/marketplace/actions/autopep8
+    pep8 works
+    todo black then modify the user who does
+
+
 [ ]  IPYNB to markdown
     https://github.com/jupyter/nbconvert
 [ ]  README to PDF
