@@ -8,7 +8,7 @@ jobs:
       - name: blackformatter
         uses: lgeiger/black-action@master
         with:
-          args:  --check
+          args: . --check
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
         with:
