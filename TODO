@@ -1,0 +1,58 @@
+Internal project group: Higher Quality Deliverables — Github Automation
+Problem: There's several things we've brainstormed that would make code commits and code reviews improved. Let's set up our template repo to handle some of these things seamlessly in an automated way. This is the current list.
+[ ]  Auto lint-check for PEP8 compliance (precommit/prepush hook w/ flake8 & black)
+[ ]  Reminders for code push/merge in Slack Channels ([https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-scheduled-reminders-for-your-team](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-scheduled-reminders-for-your-team))
+[ ]  Docker Integration ([https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages))
+[ ]  Commitizen message standardization?
+[ ]  Auto-configure AutoBot yaml files
+[ ]  Auto assign teams
+[ ]  IPYNB to markdown
+[ ]  README to PDF
+[ ]  Spell check for markdown files (maybe should go before the IPYNB to MD conversion)
+[ ]  Check for vestigial commented code and TODOS before PRs
+
+Deliverable:
+Updated template repo.
+Documentation of what is happening in Notion.
+Documentation of instructions for *anything* that needs to be done manually.
+Responsibilities: @Ben Letson, @Nick Smith
+You are responsible for the final output (all automation tasks completed).
+You can use the rest of the team for research if needed. Ask them questions about problems they've had. Run polls on preferences. Get information about previous projects.
+You can reach out to those necessary if things like Github permissions are blocking you. @Celia Ludwinski and @Daniel Ferrante have set up the permissions system for Github, and can be a resource for discussion or just for access.
+Timeline:
+Shoot for July 10, ~2 weeks.
+Check in with your review committee at least once for a status update / directionality assessment.
+Review committee:
+@Celia Ludwinski, @Tim Blake
+Use your review committee for feedback and guidance.
+Ultimately, your review committee should approve your final update before it gets merged and/or sent out to the world.
+
+
+
+make a custom githuba actions workflow to do all these steps
+
+on commit
+[ ]  Auto lint-check for PEP8 compliance (precommit/prepush hook w/ flake8 & black)
+    https://github.com/marketplace/actions/autopep8
+[ ]  IPYNB to markdown
+    https://github.com/jupyter/nbconvert
+[ ]  README to PDF
+    https://github.com/scottypate/md-to-pdf
+[ ]  Spell check for markdown files (maybe should go before the IPYNB to MD conversion)
+    https://github.com/marketplace/actions/markdown-linting-action
+[ ]  Check for vestigial commented code and TODOS before PRs
+    https://github.com/marketplace/actions/todo-to-issue
+    Or a make a simple find TODO's and send slack notif with all found
+
+
+
+[ ]  Reminders for code push/merge in Slack Channels ([https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-scheduled-reminders-for-your-team](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-scheduled-reminders-for-your-team))
+[ ]  Docker Integration ([https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages))
+[ ]  Commitizen message standardization?
+[ ]  Auto-configure AutoBot yaml files
+
+
+[ ]  Auto assign teams
+
+
+
