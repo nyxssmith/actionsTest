@@ -9,6 +9,10 @@ jobs:
         uses: peter-evans/autopep8@v1
         with:
           args: --recursive --in-place --aggressive --aggressive .
+      - name: blackformatter
+      - uses: actions/setup-python@v1
+                - run: pip install black
+                - run: black --check .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
         with:
