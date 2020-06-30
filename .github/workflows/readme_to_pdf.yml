@@ -1,5 +1,5 @@
 name: README to PDF
-
+on: push
 jobs:
   makepdfs:
     runs-on: ubuntu-latest
