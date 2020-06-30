@@ -7,6 +7,8 @@ import os
 global target
 target = ""
 
+test = 0
+
 global current_title
 current_title = ""
 
