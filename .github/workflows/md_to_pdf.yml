@@ -1,0 +1,18 @@
+name: MD to PDF
+on: push
+jobs:
+  makepdfs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Markdown to PDF
+      uses: valtyr/pandoc-action@v0.1-alpha
+    - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2
+        with:
+          commit-message: PR with convreted to PDF
+          committer: Nick Smith <nickssmith@users.noreply.github.com>
+          title: File conversions
+          body: This is an auto-generated PR
+          labels: pdfs, automated pr
+          branch: md-to-pdf-patches
