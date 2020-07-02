@@ -7,12 +7,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: Markdown to PDF
       uses: valtyr/pandoc-action@v0.1-alpha
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        # Required
-        commit_message: Apply automatic changes
-
-    - name: Push to built branch
+    - name: echo
+      run: echo "hello world"
+    - name: Push to branch
       uses: Automattic/action-commit-to-branch@master
       with:
         branch: 'master-built'
