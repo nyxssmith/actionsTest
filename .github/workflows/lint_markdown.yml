@@ -1,0 +1,22 @@
+name: Format python code
+on: push
+jobs:
+  autopep8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint changelog file
+        uses: docker://avtodev/markdown-lint:v1
+        with:
+            rules: '/lint/rules/changelog.js'
+            config: '/lint/config/changelog.yml'
+            args: './CHANGELOG.md'
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2
+        with:
+          commit-message: autopep8 action fixes
+          committer: Nick Smith <nickssmith@users.noreply.github.com>
+          title: Fixes by autopep8 action
+          body: This is an auto-generated PR with fixes by autopep8.
+          labels: autopep8, automated pr
+          branch: autopep8-patches
