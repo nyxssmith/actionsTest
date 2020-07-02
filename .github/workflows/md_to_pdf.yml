@@ -13,6 +13,10 @@ jobs:
       run: ls
     - name: gs
       run: git status
+    - name: git add
+      run: find . -name '*.pdf' -print0 | xargs -0 git add
+    - name: gs
+      run: git status
     - name: Push to branch
       uses: Automattic/action-commit-to-branch@master
       with:
