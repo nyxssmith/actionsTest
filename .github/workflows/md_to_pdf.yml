@@ -7,6 +7,13 @@ jobs:
     - uses: actions/checkout@v1
     - name: Markdown to PDF
       uses: valtyr/pandoc-action@v0.1-alpha
+    - name: Push to built branch
+      uses: Automattic/action-commit-to-branch@master
+      with:
+        branch: 'master-built'
+        commit_message: 'Build master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Required
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
