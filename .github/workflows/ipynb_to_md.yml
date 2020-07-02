@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: IPYNB_to_MD
-      uses: nickssmith/IPYNB_to_MD@0.1.2
+      uses: nickssmith/IPYNB_to_MD@0.1.3
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
