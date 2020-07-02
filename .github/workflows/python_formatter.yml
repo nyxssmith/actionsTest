@@ -4,6 +4,8 @@ jobs:
   autopep8:
     runs-on: ubuntu-latest
     steps:
+      - name: gs
+        run: git status
       - uses: actions/checkout@v2
       - name: autopep8
         uses: peter-evans/autopep8@v1
