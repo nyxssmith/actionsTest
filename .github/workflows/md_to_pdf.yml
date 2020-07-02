@@ -17,6 +17,8 @@ jobs:
       run: find . -name '*.pdf' -print0 | xargs -0 git add
     - name: gs
       run: git status
+    - name: commit
+      run: git commit -m 'added pdfs'
     - name: Push to branch
       uses: Automattic/action-commit-to-branch@master
       with:
