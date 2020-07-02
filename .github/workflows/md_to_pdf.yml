@@ -19,6 +19,8 @@ jobs:
       run: git status
     - name: commit
       run: git config --global user.email "nsmith@sflscientific.com" && git config --global user.name "Nick" && git commit -m 'added pdfs'
+    - name: push
+      run: git push
     - name: Push to branch
       uses: Automattic/action-commit-to-branch@master
       with:
