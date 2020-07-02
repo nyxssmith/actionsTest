@@ -59,4 +59,18 @@ on commit
 [ ]  Auto assign teams
 
 
+status
+
+[done - todo check args are present tense ]  Auto lint-check for PEP8 compliance (precommit/prepush hook w/ flake8 & black)
+[ ]  Reminders for code push/merge in Slack Channels ([https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-scheduled-reminders-for-your-team](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-scheduled-reminders-for-your-team))
+[ ]  Docker Integration ([https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages))
+[ ]  Commitizen message standardization?
+[ ]  Auto-configure AutoBot yaml files
+[ ]  Auto assign teams
+[ done - minus pr]  IPYNB to markdown
+[ done - minus pr]  README to PDF
+[ prog]  Spell check for markdown files (maybe should go before the IPYNB to MD conversion)
+[ prog]  Check for vestigial commented code and TODOS before PRs
+
+
 
