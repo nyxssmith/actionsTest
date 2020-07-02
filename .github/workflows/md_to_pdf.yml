@@ -9,6 +9,10 @@ jobs:
       uses: valtyr/pandoc-action@v0.1-alpha
     - name: echo
       run: echo "hello world"
+    - name: ls
+      run: ls
+    - name: gs
+      run: git status
     - name: Push to branch
       uses: Automattic/action-commit-to-branch@master
       with:
