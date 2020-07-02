@@ -13,21 +13,6 @@ jobs:
       run: ls
     - name: gs
       run: git status
-    - name: git add
-      run: find . -name '*.pdf' -print0 | xargs -0 git add
-    - name: gs
-      run: git status
-    - name: commit
-      run: git config --global user.email "nsmith@sflscientific.com" && git config --global user.name "Nick" && git commit -m 'added pdfs'
-    - name: push
-      run: git push
-    - name: Push to branch
-      uses: Automattic/action-commit-to-branch@master
-      with:
-        branch: 'master-built'
-        commit_message: 'Build master'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Required
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
@@ -37,3 +22,23 @@ jobs:
         body: This is an auto-generated PR
         labels: pdfs, automated pr
         branch: md-to-pdf-patches
+  merge:
+    name: "Merge"
+    runs-on: "ubuntu-latest"
+    needs:
+      - "makepdfs"
+    steps:
+      - name: "Merge pull request"
+        uses: "actions/github-script@v2"
+        with:
+          github-token: "$"
+          script: |
+            const pullRequest = context.payload.pull_request
+            const repository = context.repo
+
+            await github.pulls.merge({
+              merge_method: "merge",
+              owner: repository.owner,
+              pull_number: pullRequest.number,
+              repo: repository.repo,
+            })
