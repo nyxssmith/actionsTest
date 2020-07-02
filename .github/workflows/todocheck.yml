@@ -1,4 +1,4 @@
-name: Check Spelling
+name: TODO and comment check
 # https://github.com/marketplace/actions/check-spelling-js-vue-html-markdown-text
 # for conifg
 # make this a required check for merge
@@ -8,5 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Check Spelling
-      uses: UnicornGlobal/spellcheck-github-actions@master
+    - name: TODO and commented out code checker
+      uses: nickssmith/TODO_and_CommentedCode_Check@0.1
+    
