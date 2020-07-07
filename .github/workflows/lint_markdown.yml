@@ -1,5 +1,8 @@
 name: Format markdown
-on: push
+on:
+  push:
+    paths:
+      - '**.md'
 jobs:
   autopep8:
     runs-on: ubuntu-latest

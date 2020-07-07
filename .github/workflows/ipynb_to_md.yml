@@ -1,5 +1,9 @@
 name: IPYNB to MD
-on: push
+# only run on notebook update
+on:
+  push:
+    paths:
+      - '**.ipynb'
 jobs:
   makepdfs:
     runs-on: ubuntu-latest

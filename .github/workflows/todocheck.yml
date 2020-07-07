@@ -1,7 +1,4 @@
 name: TODO and comment check
-# https://github.com/marketplace/actions/check-spelling-js-vue-html-markdown-text
-# for conifg
-# make this a required check for merge
 on: push
 jobs:
   spelling:

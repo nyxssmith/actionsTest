@@ -1,5 +1,9 @@
 name: Format python code
-on: push
+# only run if .py is changed
+on:
+  push:
+    paths:
+      - '**.py'
 jobs:
   autopep8:
     runs-on: ubuntu-latest

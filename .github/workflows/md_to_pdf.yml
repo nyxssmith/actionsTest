@@ -1,5 +1,9 @@
 name: MD to PDF
-on: push
+# only run if .md updated
+on:
+  push:
+    paths:
+      - '**.md'
 jobs:
   makepdfs:
     runs-on: ubuntu-latest
