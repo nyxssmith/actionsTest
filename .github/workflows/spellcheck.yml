@@ -3,6 +3,9 @@ name: Check Spelling
 # for conifg
 # make this a required check for merge
 on: push
+paths:
+  - '**.txt'
+  - '**.md'
 jobs:
   spelling:
     runs-on: ubuntu-latest
