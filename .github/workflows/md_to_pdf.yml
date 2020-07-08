@@ -24,4 +24,3 @@ jobs:
         body: This is an auto-generated PR
         labels: pdfs, automated pr
         branch: md-to-pdf-patches
-        draft: false
