@@ -15,7 +15,7 @@ jobs:
         with:
             rules: '/lint/rules/changelog.js'
             config: '/lint/config/changelog.yml'
-            args: './CHANGELOG.md'
+            args: '**.md'
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
         with:
