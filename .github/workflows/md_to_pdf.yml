@@ -14,9 +14,12 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         commit-message: PR with convreted to PDF
         committer: Nick Smith <nickssmith@users.noreply.github.com>
         title: File conversions
         body: This is an auto-generated PR
         labels: pdfs, automated pr
         branch: md-to-pdf-patches
+        draft: false
