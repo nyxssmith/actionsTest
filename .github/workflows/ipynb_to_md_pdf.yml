@@ -1,4 +1,4 @@
-name: IPYNB to MD
+name: IPYNB to MD and PDF
 # only run on notebook update
 on:
   push:
@@ -13,12 +13,14 @@ jobs:
         ref: ${{ github.head_ref }}
     - name: IPYNB_to_MD
       uses: nickssmith/IPYNB_to_MD@0.2
+    - name: Markdown to PDF
+      uses: valtyr/pandoc-action@v0.1-alpha
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
-        commit-message: PR with convreted to MD
+        commit-message: PR with convreted to MD and PDF
         committer: Nick Smith <nickssmith@users.noreply.github.com>
-        title: File conversions
+        title: File conversions IPYNB_to_MD_PDF
         body: This is an auto-generated PR
-        labels: mds, automated pr
-        branch: pynb-to-md-patches
+        labels: mds,pdfs, automated pr
+        branch: pynb-to-md-pdf-patches

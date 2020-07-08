@@ -20,7 +20,7 @@ jobs:
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         commit-message: PR with convreted to PDF
         committer: Nick Smith <nickssmith@users.noreply.github.com>
-        title: File conversions
+        title: File conversions MD_to_PDF
         body: This is an auto-generated PR
         labels: pdfs, automated pr
         branch: md-to-pdf-patches
