@@ -1,4 +1,4 @@
-name: Format markdown
+name: Lint Markdown
 on:
   push:
     paths:
@@ -16,12 +16,3 @@ jobs:
             rules: '/lint/rules/changelog.js'
             config: '/lint/config/changelog.yml'
             args: '**.md'
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2
-        with:
-          commit-message: markdownlint action fixes
-          committer: Nick Smith <nickssmith@users.noreply.github.com>
-          title: Fixes by markdownlint action
-          body: This is an auto-generated PR with fixes to markdown
-          labels: markdownlint, automated pr
-          branch: markdownlint-patches
