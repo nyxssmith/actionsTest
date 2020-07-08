@@ -1,5 +1,9 @@
 name: Format python code
-on: push
+# only run if .py is changed
+on:
+  push:
+    paths:
+      - '**.py'
 jobs:
   autopep8:
     runs-on: ubuntu-latest
@@ -9,13 +13,16 @@ jobs:
         uses: peter-evans/autopep8@v1
         with:
           args: --recursive --in-place --aggressive --aggressive .
+      - name: blackformatter
+        uses: lgeiger/black-action@master
+        with:
+          args: .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
         with:
           commit-message: autopep8 action fixes
-          committer: Peter Evans <peter-evans@users.noreply.github.com>
+          committer: Nick Smith <nickssmith@users.noreply.github.com>
           title: Fixes by autopep8 action
           body: This is an auto-generated PR with fixes by autopep8.
           labels: autopep8, automated pr
-          reviewers: peter-evans
           branch: autopep8-patches

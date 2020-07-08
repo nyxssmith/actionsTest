@@ -1,0 +1,22 @@
+name: IPYNB to MD
+# only run on notebook update
+on:
+  push:
+    paths:
+      - '**.ipynb'
+jobs:
+  makepdfs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: IPYNB_to_MD
+      uses: nickssmith/IPYNB_to_MD@0.2
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v2
+      with:
+        commit-message: PR with convreted to MD
+        committer: Nick Smith <nickssmith@users.noreply.github.com>
+        title: File conversions
+        body: This is an auto-generated PR
+        labels: mds, automated pr
+        branch: pynb-to-md-patches
