@@ -238,3 +238,20 @@ if __name__ == '__main__':
         curses.wrapper(MyApp)
     else:
         print("Must specify a csv to menu")
+
+
+
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('integers', metavar='N', type=int, nargs='+',
+                    help='an integer for the accumulator')
+    parser.add_argument('--sum', dest='accumulate', action='store_const',
+                    const=sum, default=max,
+                    help='sum the integers (default: find the max)')
+    parser.add_argument('predict', metavar='N', type=int, nargs='+',
+                    help='an integer for the accumulator')
+    parser.add_argument('predicted', metavar='N', type=int, nargs='+',
+                    help='an integer for the accumulator')
+
+    args = parser.parse_args()
