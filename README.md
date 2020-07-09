@@ -7,7 +7,7 @@
 1. f
 1. 3
 
-test three to lints
+test one of change to spellchecker
 
 ![Check Spelling](https://github.com/nickssmith/actionsTest/workflows/Check%20Spelling/badge.svg)
 
