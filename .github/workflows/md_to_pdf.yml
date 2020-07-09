@@ -15,7 +15,7 @@ jobs:
     - name: Markdown to PDF
       uses: valtyr/pandoc-action@v0.1-alpha
     - name: Remove non readme pdfs
-      run: git status
+      run: for pdf in $(git status | grep ".pdf" | grep -v --ignore-case readme); do rm $pdf; done
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
