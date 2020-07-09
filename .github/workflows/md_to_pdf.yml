@@ -14,8 +14,9 @@ jobs:
     # converts all md to pdf
     - name: Markdown to PDF
       uses: valtyr/pandoc-action@v0.1-alpha
+    # remove all pdfs that were untracked and not readme
     - name: Remove non readme pdfs
-      run: git status
+      run: for pdf in $(git ls-files --others --exclude-standard | grep ".pdf" | grep -v --ignore-case readme); do rm $pdf; done
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
       with:
