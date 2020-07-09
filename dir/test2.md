@@ -22,7 +22,7 @@ import boto3
 
 """
 notes to future setup
-test
+
 host is the vpc endpoint of the ES domain minus the 'https://' and '/' at the start and end
 
 
@@ -57,7 +57,7 @@ awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, servi
 print(host)
 es = Elasticsearch(
     hosts = [{'host': host, 'port': 443}],
-#      http_auth = awsauth,
+#     http_auth = awsauth,
     use_ssl = True,
     verify_certs = True,
     connection_class = RequestsHttpConnection
