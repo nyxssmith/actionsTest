@@ -18,10 +18,6 @@ TODO
 
 run spell check on 5-10 repos and get the base words for the wordlist.txt file to put in the template
 
-can we move the wordlist.txt file into some sort of config directory? .github/something maybe?
-
-find out how to ignore requirements.txt file for misspellings
-
 is there a way to check the history of vestigial code comments to use that to create better rules to check?
 
 
@@ -42,15 +38,8 @@ By eod tomorrow
 
 run spell check on 5-10 repos and get the base words for the wordlist.txt file to put in the template[@Nick Smith]
 
-can we move the wordlist.txt file into some sort of config directory? .github/something maybe? [@Nick Smith]
-
-find out how to ignore requirements.txt file for misspellings [@Nick Smith]
-
-shouldn't convert ipynb converted to md files subsequently to pdf [@Nick Smith]
 
 is there a way to check the history of vestigial code comments to use that to create better rules to check? [@Nick Smith]
-
-only readmes should be converted to PDFs. Make sure to find all readmes in all directories [@Nick Smith]
 
 set it up so that once you push, you see the actions in the terminal. [@Nick Smith]
 
