@@ -27,11 +27,6 @@ set it up so that once you push, you see the actions in the terminal.
 look up what needs to be installed locally
 
 
-Remaining work:
-
-
-Present tense args. Probably be another action. [@Nick Smith]
-
 
 By eod tomorrow
 
@@ -43,7 +38,6 @@ set it up so that once you push, you see the actions in the terminal. [@Nick Smi
 
 look up what needs to be installed locally [@Nick Smith]
 
-Present tense args. Probably be another action. [@Nick Smith]
 
 Stretch goals:
 
