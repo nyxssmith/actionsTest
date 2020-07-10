@@ -29,7 +29,6 @@ look up what needs to be installed locally
 
 Remaining work:
 
-PR message standardization: Create a template with a prefilled body [@Nick Smith to propose]. Implemented as an MD file under the .github folder
 
 Present tense args. Probably be another action. [@Nick Smith]
 
@@ -37,7 +36,6 @@ Present tense args. Probably be another action. [@Nick Smith]
 By eod tomorrow
 
 run spell check on 5-10 repos and get the base words for the wordlist.txt file to put in the template[@Nick Smith]
-
 
 is there a way to check the history of vestigial code comments to use that to create better rules to check? [@Nick Smith]
 
