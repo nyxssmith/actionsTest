@@ -71,7 +71,6 @@ manpages
 arn
 nlp
 linux
-
 serverless
 cloudwatch
 boolean
