@@ -9,6 +9,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Check args are present tense
-      uses: nickssmith/PresentTenseArgs@0.1
+      uses: nickssmith/PresentTenseArgs@0.2
 
     
