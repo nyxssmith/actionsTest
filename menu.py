@@ -237,7 +237,7 @@ if __name__ == '__main__':
         target = sys.argv[1]
         curses.wrapper(MyApp)
     else:
-        print("Must specify a csv to menu")
+        print("Must specify a csv to menu ")
 
 
 
