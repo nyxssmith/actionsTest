@@ -11,7 +11,6 @@ test one of change to spellchecker
 
 ![](pic.png)
 
-s
 
 
 run spell check on 5-10 repos and get the base words for the wordlist.txt file to put in the template
