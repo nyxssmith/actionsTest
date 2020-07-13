@@ -31,6 +31,7 @@ is there a way to check the history of vestigial code comments to use that to cr
 
 set it up so that once you push, you see the actions in the terminal. [@Nick Smith]
 
+look up what needs to be installed locally [@Nick Smith]
 
 
 Stretch goals:
