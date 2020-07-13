@@ -34,6 +34,7 @@ set it up so that once you push, you see the actions in the terminal. [@Nick Smi
 look up what needs to be installed locally [@Nick Smith]
 
 
+
 Stretch goals:
 
 PR message standardization: Create a template with a prefilled body [@Nick Smith to propose]. Implemented as an MD file under the .github folder
