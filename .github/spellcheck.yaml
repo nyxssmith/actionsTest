@@ -24,16 +24,3 @@ matrix:
       - 'pre'
   sources:
   - '**/*.md'
-- name: Text
-  sources:
-  - '**/*.txt|!wordlist.txt|!requirements.txt'
-  ignores:
-  expect_match: false
-  dictionary:
-    wordlists:
-    - wordlist.txt
-    output: wordlist.dic
-    encoding: utf-8
-  pipeline:
-  - pyspelling.filters.text:
-      convert_encoding: utf-8
