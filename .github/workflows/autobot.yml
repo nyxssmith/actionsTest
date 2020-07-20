@@ -12,7 +12,7 @@ jobs:
       with:
         ref: ${{ github.head_ref }}
     - name: AutoBotYamlFileSetter
-      uses: nickssmith/AutoBotYaml@0.5
+      uses: nickssmith/AutoBotYaml@0.6
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
     
