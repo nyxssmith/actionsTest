@@ -28,6 +28,7 @@ look up what needs to be installed locally (in theory only python)
 By eod tomorrow
 
 
+
 is there a way to check the history of vestigial code comments to use that to create better rules to check? [@Nick Smith]
 
 set it up so that once you push, you see the actions in the terminal. [@Nick Smith]
