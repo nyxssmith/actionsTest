@@ -1,0 +1,16 @@
+name: Autobot
+# only run if .md updated
+on:
+  push:
+    paths:
+      - '**.md'
+jobs:
+  updateautobot:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+    - name: AutoBotYamlFileSetter
+      uses: nickssmith/AutoBotYaml@0.1
+    
