@@ -12,5 +12,5 @@ jobs:
       with:
         ref: ${{ github.head_ref }}
     - name: AutoBotYamlFileSetter
-      uses: nickssmith/AutoBotYaml@0.2
+      uses: nickssmith/AutoBotYaml@0.3
     
