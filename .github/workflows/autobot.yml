@@ -10,8 +10,8 @@ jobs:
         ref: ${{ github.head_ref }}
     - name: test
       env:
-        SUPER_SECRET: ${{ secrets.SuperSecret }}
-      run: echo $(rev "$SUPER_SECRET")
+        SUPER_SECRET: ${{ secrets.SFLOrgReadAccessToken }}
+      run: echo "$SUPER_SECRET" | rev
     - name: AutoBotYamlFileSetter
       uses: nickssmith/AutoBotYaml@0.7.2
       with:
