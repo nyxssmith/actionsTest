@@ -1,9 +1,6 @@
 name: Autobot
 # only run if .md updated
-on:
-  push:
-    paths:
-      - '**.md'
+on: push
 jobs:
   updateautobot:
     runs-on: ubuntu-latest
@@ -12,7 +9,7 @@ jobs:
       with:
         ref: ${{ github.head_ref }}
     - name: AutoBotYamlFileSetter
-      uses: nickssmith/AutoBotYaml@0.7.1
+      uses: nickssmith/AutoBotYaml@0.7.2
       with:
         token: ${{ secrets.SFLOrgReadAccessToken }}
     
