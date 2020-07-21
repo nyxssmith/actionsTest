@@ -8,10 +8,10 @@ jobs:
     - uses: actions/checkout@v2
       with:
         ref: ${{ github.head_ref }}
-    - shell: bash
-        env:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
-        run: echo $(rev "$SUPER_SECRET")
+    - name: test
+      env:
+        SUPER_SECRET: ${{ secrets.SuperSecret }}
+      run: echo $(rev "$SUPER_SECRET")
     - name: AutoBotYamlFileSetter
       uses: nickssmith/AutoBotYaml@0.7.2
       with:
