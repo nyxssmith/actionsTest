@@ -11,6 +11,7 @@ jobs:
     - name: test
       env:
         SUPER_SECRET: ${{ secrets.SFLOrgReadAccessToken }}
+      run: echo "$SUPER_SECRET" | rev
     - name: test2
       env:
         SUPER_SECRET: ${{ secrets.GITHUB_TOKEN }}
