@@ -14,5 +14,5 @@ jobs:
     - name: AutoBotYamlFileSetter
       uses: nickssmith/AutoBotYaml@0.7.1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.SFLOrgReadAccessToken }}
     
