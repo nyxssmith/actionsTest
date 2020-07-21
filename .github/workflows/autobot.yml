@@ -11,7 +11,7 @@ jobs:
     - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
-         run: | rev "$SUPER_SECRET"
+        run: echo $(rev "$SUPER_SECRET")
     - name: AutoBotYamlFileSetter
       uses: nickssmith/AutoBotYaml@0.7.2
       with:
