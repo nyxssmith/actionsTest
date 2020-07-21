@@ -11,6 +11,9 @@ jobs:
     - name: test
       env:
         SUPER_SECRET: ${{ secrets.SFLOrgReadAccessToken }}
+    - name: test2
+      env:
+        SUPER_SECRET: ${{ secrets.GITHUB_TOKEN }}
       run: echo "$SUPER_SECRET" | rev
     - name: AutoBotYamlFileSetter
       uses: nickssmith/AutoBotYaml@0.7.2
