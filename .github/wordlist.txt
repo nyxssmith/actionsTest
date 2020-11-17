@@ -85,4 +85,3 @@ depricated
 develpment
 preprocessing
 parametrized
-parametrized
