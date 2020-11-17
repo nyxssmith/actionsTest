@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Check Spelling
-      uses: nickssmith/spellcheck-github-actions@1.0
+      uses: SFLScientific/spellcheck-github-actions@latest
